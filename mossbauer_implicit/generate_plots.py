@@ -5,7 +5,7 @@ import numpy as np
 
 # --- PLOTTING DATA: DEATH MODEL --- #
 
-data = np.load('./deathmodel_dim1.npz', allow_pickle=True)
+data = np.load('mossbauer_implicit/mossbauermodel_dim1.npz', allow_pickle=True)
 filename = 'deathmodel_utility'
 
 # UTILITY
@@ -18,7 +18,7 @@ plotting.plot_acquisition(obj, data['d_opt'], filename=filename)
 # POSTERIOR
 pp = data['prior_samples']
 rr = data['r_obs']
-plotting.plot_posterior(pp, rr, model='death', truth=1.5)
+plotting.plot_posterior(pp, rr, model='death', truth=0.5)
 
 # --- PLOTTING DATA: SIR MODEL --- #
 
