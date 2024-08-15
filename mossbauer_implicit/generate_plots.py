@@ -5,15 +5,15 @@ import numpy as np
 
 # --- PLOTTING DATA: DEATH MODEL --- #
 
-data = np.load('mossbauer_implicit/mossbauermodel_dim1.npz', allow_pickle=True)
-filename = 'deathmodel_utility'
+data = np.load('mossbauer_implicit/mossbauermodel_dim4.npz', allow_pickle=True)
+filename = 'mossbauermodel_utility'
 
 # UTILITY
 if type(data['bo_obj']) == np.ndarray:
     obj = data['bo_obj'].tolist()
 else:
     obj = data['bo_obj']
-plotting.plot_acquisition(obj, data['d_opt'], filename=filename)
+#plotting.plot_acquisition(obj, data['d_opt'], filename=filename)
 
 # POSTERIOR
 pp = data['prior_samples']

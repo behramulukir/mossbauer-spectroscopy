@@ -63,11 +63,11 @@ def plot_acquisition(obj, d_opt, filename = None):
     plt.tight_layout()
 
     if filename:
-        plt.savefig('{}.pdf'.format(filename))
-        plt.savefig('{}.png'.format(filename))
+        plt.savefig('{}_dim4.pdf'.format(filename))
+        plt.savefig('{}_dim4.png'.format(filename))
     else:
-        plt.savefig('./utility.pdf')
-        plt.savefig('./utility.png')
+        plt.savefig('./utility_dim4.pdf')
+        plt.savefig('./utility_dim4.png')
 
 # ------- POSTERIOR PLOTS ------- #
 
@@ -151,5 +151,5 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
         plt.savefig('{}.pdf'.format(filename))
         plt.savefig('{}.png'.format(filename))
     else:
-        plt.savefig('./{}model_posterior.pdf'.format(model))
-        plt.savefig('./{}model_posterior.png'.format(model))
+        plt.savefig('./{}model_posterior_dim4.pdf'.format(model))
+        plt.savefig('./{}model_posterior_dim4.png'.format(model))

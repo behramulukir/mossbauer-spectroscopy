@@ -126,7 +126,8 @@ class MutualInformation(Utility):
                 psi_obs = self.simobj.summary(y_obs.reshape(1, -1))
 
             # Compute coefficients for each prior sample
-            tmp_bl = Parallel(n_jobs=int(num_cores))(delayed(infobj._logistic_regression)(p) for p in self.prior_samples)
+            print(multiprocessing.cpu_count)
+            tmp_bl = Parallel(n_jobs=multiprocessing.cpu_count())(delayed(infobj._logistic_regression)(p) for p in self.prior_samples)
             self.b_obs = np.array(tmp_bl)
 
             # Compute ratios for each coefficient

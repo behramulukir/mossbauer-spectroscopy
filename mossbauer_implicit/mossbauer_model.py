@@ -9,13 +9,13 @@ import staticdesign
 # Set these to change performance of experimental design
 
 # CPU cores to use
-num_cores = 1
+num_cores = 1 
 
 # Set dimensions of design variable
-dimensions = 1
+dimensions = 5
 
 # Number of prior samples (higher => more accurate posterior)
-sample_number = 500
+sample_number = 1000
 
 # Max number of utility evaluations in bayesian optimization (per core)
 iteration_number = 10
