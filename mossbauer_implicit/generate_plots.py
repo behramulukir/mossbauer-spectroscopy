@@ -20,6 +20,7 @@ pp = data['prior_samples']
 rr = data['r_obs']
 plotting.plot_posterior(pp, rr, model='mossbauer', truth=0.5)
 
+"""""
 # --- PLOTTING DATA: SIR MODEL --- #
 
 data = np.load('./sirmodel_dim1.npz')
@@ -36,3 +37,4 @@ plotting.plot_acquisition(obj, data['d_opt'], filename=filename)
 pp = data['prior_samples']
 rr = data['r_obs']
 plotting.plot_posterior(pp, rr, model='sir', truth=np.array([0.15, 0.05]))
+"""""

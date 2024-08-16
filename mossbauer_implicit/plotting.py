@@ -89,7 +89,6 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
     post = np.array(post)
 
     if model=='mossbauer':
-
         # define kde smoothing and grid
         smooth = 0.35
         xs = np.linspace(np.min(prior_samples),np.max(prior_samples),1000)
@@ -107,13 +106,13 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
         ax.axvline(truth, ls='--', c='r', lw=2, label=r'$b_{\text{true}}$', alpha=0.5)
         ax.grid(True, ls='--')
         ax.tick_params(labelsize=20)
-        ax.set_xlabel(r'b', size=20)
+        ax.set_xlabel(r'theta', size=20)
         ax.set_ylabel(r'Posterior Density', size=20)
         ax.legend(prop={'size': 17})
 
         plt.tight_layout()
-"""""
-    elif model=='sir':
+
+    elif model=='siri':
 
         # define grid
         smooth = 0.35
@@ -153,4 +152,3 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
     else:
         plt.savefig('./{}model_posterior_dim4.pdf'.format(model))
         plt.savefig('./{}model_posterior_dim4.png'.format(model))
-"""""
