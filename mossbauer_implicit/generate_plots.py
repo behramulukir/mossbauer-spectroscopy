@@ -3,7 +3,7 @@
 import plotting
 import numpy as np
 
-# --- PLOTTING DATA: DEATH MODEL --- #
+# --- PLOTTING DATA: MOSSBAUER MODEL --- #
 
 data = np.load('mossbauer_implicit/mossbauermodel_dim4.npz', allow_pickle=True)
 filename = 'mossbauermodel_utility'
@@ -18,7 +18,7 @@ else:
 # POSTERIOR
 pp = data['prior_samples']
 rr = data['r_obs']
-plotting.plot_posterior(pp, rr, model='death', truth=0.5)
+plotting.plot_posterior(pp, rr, model='mossbauer', truth=0.5)
 
 # --- PLOTTING DATA: SIR MODEL --- #
 

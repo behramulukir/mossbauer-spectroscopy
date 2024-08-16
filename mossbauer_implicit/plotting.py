@@ -88,7 +88,7 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
         post.append(pp[cat])
     post = np.array(post)
 
-    if model=='death':
+    if model=='mossbauer':
 
         # define kde smoothing and grid
         smooth = 0.35
@@ -112,7 +112,7 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
         ax.legend(prop={'size': 17})
 
         plt.tight_layout()
-
+"""""
     elif model=='sir':
 
         # define grid
@@ -153,3 +153,4 @@ def plot_posterior(prior_samples, ratios, model, truth, filename = None):
     else:
         plt.savefig('./{}model_posterior_dim4.pdf'.format(model))
         plt.savefig('./{}model_posterior_dim4.png'.format(model))
+"""""
