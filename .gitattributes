@@ -2,4 +2,4 @@
 data/ -linguist-detectable
 graphs/ -linguist-detectable
 sources/ -linguist-detectable
-
+*.png -linguist-detectable
