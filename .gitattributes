@@ -1,2 +1,2 @@
 *.py linguist-language=Python
-Jupyter Notebook -linguist-detectable
+*.ipynb -linguist-detectable
